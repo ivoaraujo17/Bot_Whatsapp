@@ -17,17 +17,3 @@ services:
 
     env_file:
       - .env
-    
-  api:
-    build:
-      context: .
-      dockerfile: dockerfile.api
-    container_name: wpp_bot_api
-    restart: always
-    ports:
-      - "5000:5000"
-    volumes:
-      - .:/app
-      #- ./bot:/app/bot
-    env_file:
-      - .env
